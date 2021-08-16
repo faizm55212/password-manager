@@ -39,7 +39,7 @@ Todo's:
 <img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/homescreen.png" alt="img" align="left" width="400px">
 <img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/addPassword.png" alt="img" align="right" width="400px">
 
-<br clear = right>
+<br clear = left>
 
 ## Help
 
