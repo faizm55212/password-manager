@@ -1,16 +1,34 @@
-# password_manager
+# Passwordz
 
-A new Flutter project.
+Password _manager
 
-## Getting Started
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+![](https://visitor-badge.glitch.me/badge?page_id=faizm55212.password-manger)
+[![Stars](https://img.shields.io/github/stars/faizm55212/password-manger)](https://github.com/faizm55212/password-manger)
+[![Forks](https://img.shields.io/github/forks/faizm55212/password-manger)](https://github.com/faizm55212/password-manger/fork)
 
-This project is a starting point for a Flutter application.
+### Thanks for dropping by!
 
-A few resources to get you started if this is your first Flutter project:
+Whats Working:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
++ **Encryption**
++ **Copy to Clipoboard**
++ **Password genrator**
++ **Add**
++ **Edit**
++ **Delete**
 
-For help getting started with Flutter, view our
+Todo's:
+
++ [x]**Tap to View**
++ [x]**Copy to Clipoboard**
++ []**Search**
++ []**Add Tags**
++ []**Auto Grab**
++ []**Auto Fill**
+
+
+
+For help getting started with Flutter, view 
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
