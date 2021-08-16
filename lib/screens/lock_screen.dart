@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:password_manager/components/constants.dart';
 import 'package:password_manager/screens/home_screen.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 String password = "";
 String correctPin = "786486";
@@ -23,10 +23,8 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Center(
             child: Container(
-              child: SvgPicture.asset(
-                "assets/svgs/authentication.svg",
-                width: 80.0,
-              ),
+              height: 50.0,
+              child: Image(image: AssetImage("assets/images/lock2.png")),
             ),
           ),
           SizedBox(height: 80.0),
@@ -115,11 +113,24 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     MaterialButton(
-                      minWidth: 75.0,
-                      height: 75.0,
-
-                      onPressed: () {},
-                      child: null,
+                      splashColor: Colors.black,
+                      highlightColor: Colors.green,
+                      color: Colors.teal.shade900,
+                      minWidth: 85.0,
+                      height: 85.0,
+                      onPressed: () {
+                        if (password == correctPin) {
+                          Get.off(HomeScreen());
+                        }
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
+                      child: Image.asset(
+                        "assets/images/check.png",
+                        scale: 18.0,
+                        color: Colors.green,
+                      ),
                     ),
                     Numpad(0),
                     MaterialButton(
@@ -163,6 +174,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget Numpad(int n) {
     return MaterialButton(
       splashColor: Colors.black,
@@ -175,9 +187,6 @@ class _LoginScreenState extends State<LoginScreen> {
           setState(() {
             password = password + '$n';
           });
-        } else if (password == correctPin) {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => HomeScreen()));
         }
       },
       shape: RoundedRectangleBorder(
