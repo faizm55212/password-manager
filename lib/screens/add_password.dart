@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:password_manager/components/constants.dart';
+import 'package:password_manager/components/random.dart';
 import 'package:password_manager/controllers/pswd_controller.dart';
 import 'package:password_manager/models/password.dart';
 
@@ -12,6 +13,8 @@ class AddPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     final pswdController = Get.find<PswdController>();
     final newPassword = Password();
+    final _passController = TextEditingController();
+    var _obsecure = true.obs;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(KBackgroundColors),
@@ -147,48 +150,62 @@ class AddPassword extends StatelessWidget {
                           color: Colors.grey[600],
                           fontSize: 15.0),
                     ),
-                    TextFormField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.zero,
-                        suffix: IconButton(
-                          icon: Icon(Icons.visibility_outlined,
-                              color: Colors.grey),
-                          onPressed: () {},
+                    Obx(
+                      () => TextFormField(
+                        controller: _passController,
+                        obscureText: _obsecure.value,
+                        decoration: InputDecoration(
+                          contentPadding: EdgeInsets.zero,
+                          suffix: IconButton(
+                            icon: Icon(Icons.visibility_outlined,
+                                color: Colors.grey),
+                            onPressed: () {
+                              if (_obsecure.value) {
+                                _obsecure.value = false;
+                              } else {
+                                _obsecure.value = true;
+                              }
+                            },
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Colors.grey[700], width: 2.0),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Colors.white60, width: 2.0),
+                          ),
+                          hintText: "Google",
                         ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.grey[700], width: 2.0),
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.white,
+                          fontFamily: 'Ubuntu',
+                          fontWeight: FontWeight.bold,
                         ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.white60, width: 2.0),
-                        ),
-                        hintText: "Google",
+                        onChanged: (val) {
+                          val = _passController.text;
+                          newPassword.psswd = val;
+                        },
+                        validator: (val) {
+                          if (val.trim().isEmpty) {
+                            return "Enter A Value !";
+                          } else {
+                            return null;
+                          }
+                        },
                       ),
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        color: Colors.white,
-                        fontFamily: 'Ubuntu',
-                        fontWeight: FontWeight.bold,
-                      ),
-                      onChanged: (val) {
-                        newPassword.psswd = val;
-                      },
-                      validator: (val) {
-                        if (val.trim().isEmpty) {
-                          return "Enter A Value !";
-                        } else {
-                          return null;
-                        }
-                      },
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     Center(
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          final ranPassword = generatePassword();
+                          _passController.text =
+                              newPassword.psswd = ranPassword;
+                        },
                         child: Center(
                           child: Text(
                             'Generate a Password',
