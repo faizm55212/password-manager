@@ -11,7 +11,6 @@ Password _manager
 
 ### Thanks for dropping by!
 
-<img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/lockscreen.png" alt="img" align="right" width="400px">
 
 Whats Working:
 
