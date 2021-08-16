@@ -1,5 +1,7 @@
 # Passwordz
 
+
+<img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/lockscreen.png" alt="img" align="right" width="400px">
 Password _manager
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
@@ -31,7 +33,7 @@ Todo's:
 
 ## Screenshots
 
-<img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/homescreen.png" alt="img" align="right" width="400px">
+<img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/homescreen.png" alt="img" align="left" width="400px">
 <img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/addPassword.png" alt="img" align="right" width="400px">
 
 
