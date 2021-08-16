@@ -36,10 +36,10 @@ Todo's:
 
 ## Screenshots
 
-<img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/homescreen.png" alt="img" align="left" width="400px">
-<img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/addPassword.png" alt="img" align="right" width="400px">
+<img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/homescreen.png" alt="img" align="left" width="350px">
+<img src="https://github.com/faizm55212/password-manager/blob/master/Screenshots/addPassword.png" alt="img" align="right" width="350px">
 
-<br clear = left>
+<br clear = right>
 
 ## Help
 
